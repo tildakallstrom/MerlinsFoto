@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merlins foto</title>
+  <link rel="stylesheet" href="style/main.css" type="text/css" />
+  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+  
+    <!-- mobil-dropdownmeny som göms för desktop -->
+    <!-- divar som skapar hamburgerikon som animeras vid klick -->
+    <div class="mobile">
+      <div class="ham" id="hamburger" onclick="hamburgermenu(this)">
+        <div class="lineone"></div>
+        <div class="linetwo"></div>
+        <div class="linethree"></div>
+      </div>
+      <!-- mobilmenyns navigering -->
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="dronare.html" >Drönare</a></li>
+        <li><a href="kamera.html">Kamera</a></li>
+        <li><a href="objektiv.html">Objektiv</a></li>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="kopinfo.html">Köpinfo</a></li>
+        <li><a href="cart.html" class="here">Kassa</a></li>
+      </ul>
+    </nav>
+    <!-- headercontent med logga, kundvagn-->
+   <div class="headerdesktop">
+      <a href="index.html">
+        <!-- logo länkas till index-->
+        <img src="img/logo.png" alt="Merlins foto" class="logo">
+      </a>
+    
+    
+    <!-- desktopmeny som göms vid mobilvy -->
+    <nav class="desktopmeny">
+      <ul id="nav">
+        <li><a href="dronare.html">Drönare</a></li>
+        <li><a href="kamera.html">Kamera</a></li>
+        <li><a href="objektiv.html">Objektiv</a></li>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="kopinfo.html">Köpinfo</a></li>
+      </ul>
+    </nav>
+      <!-- kundvagns ikon som vid klick tar besökaren till kassan -->
+      <div id="cart">
+        <a href="cart.html"><span id="small-basket"></span><img src="img/kundkorg.png" alt="kundkorg"
+            class="kundkorg"></a>
+      </div>
+    </div>
+  </header>
+    <p class="breadcrumbs"> <a href="index.html">Start</a> > <a href="cart.html">Kassa</a> </p>
+  
+  <!--sidrubrik-->
+  <h1>Kassa</h1>
+  <!--wrapper som sätter bakgrundsfärg, bredd etc i css-->
+  <section class="wrapper1">
+    <h2 class="varukorg">Kundvagn</h2>
+
+    <!-- table som fylls i varefter varor läggs i kundvagn -->
+    <table>
+      <thead>
+        <tr>
+          <td>Bild</td>
+          <td>Vara</td>
+          <td>Antal</td>
+          <td>Pris</td>
+        </tr>
+      </thead>
+      <tbody id="checkout">
+      </tbody>
+    </table>
+    <!-- knapp för att rensa kundvagn-->
+    <button onclick="emptyBasket()" id="reset">Rensa Kundvagnen</button>
+    <!-- formulär för ifyllnad av leveransuppgifter -->
+    <div id="form">
+      <h2 class="varukorg">Dina leveransuppgifter</h2>
+      <fieldset>
+        <label id="namn">Namn:<br>
+          <input type="text" name="Namn" placeholder="Förnamn Efternamn" id="nametxt"></label>
+        <br>
+        <label id="adresse">Adress:<br>
+          <input type="text" name="Adress" placeholder="Köpgatan 2" id="adresstxt"></label>
+        <br>
+        <label id="postalnumber">Postnummer:<br>
+          <input type="text" name="Postnr" placeholder="12345" id="postnumbertxt"></label>
+        <br>
+        <label id="city">Ort<br>
+          <input type="text" name="ort" placeholder="Köpstan" id="citytxt"></label>
+        <br>
+        <label id="telefone">Telefonnummer:<br>
+          <input type="text" name="Telefonenumber" placeholder="0712345678" id="numbertxt"></label>
+        <br>
+        <label id="email">E-mail:<br>
+          <input type="text" name="Email" placeholder="köp@mycket.nu" id="emailtxt"></label>
+        <br>
+        <br> <!-- knapp för att skicka order -->
+        <button onclick="checkoutBasket()" id="sendOrder">Skicka order</button>
+      </fieldset>
+   </div>
+  </section>
+  <footer>
+    <div class="grid-container">
+      <div class="grid-item-footer1">
+        <h3>Om Merlins foto</h3>
+        <ul>
+          <li><a href="om.html">Om företaget</a></li>
+          <li><a href="kontakt.html">Kontakta oss</a></li>
+          <li><a href="kopinfo.html">Köpinformation</a></li>
+        </ul>
+      </div>
+      <div class="grid-item-footer2">
+        <h3>Följ oss</h3>
+        <ul>
+          <li><a href="https://facebook.com">Facebook</a></li>
+          <li><a href="https://instagram.com">Instagram</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js.js"></script>
+    <script src="script.js"></script>
+  </footer>
+
+</body>
+
+</html>

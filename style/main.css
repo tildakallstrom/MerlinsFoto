@@ -1,0 +1,1199 @@
+@charset "UTF-8";
+
+/* rensar allt inför egen kod*/
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+/* import av fonter */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Playfair+Display:wght@500&display=swap');
+/* Sanchez serif för rubriker, Montserrat sans-serif för brödtext, Merriweather serif för priser */
+
+/* Nedan följer generell styling som gäller för samtliga brytpunker */ 
+* {
+    margin: 0;
+    padding: 0;
+}
+/* bakgrundsfärg och centrering av body */
+body {
+  background-color: #121416;
+  margin: auto;
+  
+}
+.headerdesktop {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+#small-basket {
+  color: lightgrey;
+  font-family: 'Merriweather', serif;
+  text-decoration: none;
+  }
+  /* border under header för att avskärma */
+  header {
+    background: linear-gradient( black 92%, #5ca08e);
+  }
+  /* styling för själva moibilmenyn */
+  .navbar {
+  position: fixed; /* fixed så att den göms */
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  background-color: #121416; /* svart bakgrundsfärg */
+  width: 80%; /* 80% bredd för att menyikon ska visas */
+  height: 90%; /* bredd som håller sig inom skärmen */
+  overflow: hidden;
+  margin-left: 42px; /* sätter den bredvid menyikon, inte på */
+  transform: translateY(-110%); /* gör att menyn endast visas vid klick */
+  -webkit-transform: translateY(-110%);
+  -ms-transform: translateY(-110%);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  }
+  /* visas denna version på desktop, blir pekaren en hand vid hover */
+  .ham:hover {
+  cursor: pointer;
+  }
+  .showNav {
+  /* visar menyn */
+  -webkit-transform: translateY(0); 
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  
+  }
+  /* styling för menylänkar */
+  .navbar ul {
+  width: 80%;
+  height: 90%;
+  list-style: none; /* tar bort punkter */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly; /* jämnt mellanrum mellan menylänkar */
+  }
+  .navbar ul li a {
+  color: #fffff1;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-family: 'Verdana', sans-serif; /* lättläst font i meny */
+  font-size: 1.1em;
+  margin-left: 3.5em;
+  }
+  /* hover ifall besökaren tittar på mobilversion via dator */
+  .navbar ul li a:hover, .navbar ul li a:focus {
+  color: #5ca08e;
+  cursor: pointer;
+  }
+  /* styling för den länk man befinner sig på */         
+  .navbar .here {
+  text-decoration: underline;
+  text-decoration-color: #5ca08e;
+  color: #5ca08e;
+  }
+  /* divs som skapar menyikon */
+  .lineone, .linetwo, .linethree {
+  width: 38px;
+  height: 5px;
+  border-radius: 25px;
+  background-color: #fffff1;
+  margin: 7px;
+  transition: 0.5s;
+  box-shadow: 2px 2px 4px #000000; /* skugga runt linjer */
+
+  }
+  /*roterar menyikon till ett kors */
+  .change .lineone {
+  transform: rotate(45deg) translate(-1px, 10px);
+  }
+  /* gömmer denna linje vid rotation */
+  .change .linetwo {
+  opacity: 0;
+  }
+  .change .linethree {
+  transform: rotate(-45deg) translate(5px, -19px);
+  }
+  /* styling för logga i header */
+  .logo {
+      width: 10em;
+   display: block;
+   margin-bottom: -0.55em;
+   margin-top: -4em;
+   margin-left: -2em;
+  }
+   .kundkorg {
+     width: 4.4em;
+     margin-top: -5em;
+    }  
+  #small-basket {
+    color: lightgrey;
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+  }
+  .desktopmeny ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.desktopmeny li a {
+  display: block;
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family:  'Montserrat', sans-serif;
+}
+.desktopmeny li a:hover {
+  color: #5ca08e;
+  text-decoration: underline;
+  transition: 0.8s; /* skapar transition för menylänkar */
+} 
+.desktopmeny .here {
+text-decoration: underline;
+text-decoration-color:#5ca08e;
+text-decoration-style: double;
+}
+    /* wrapper med svart bakgrundsfärg */
+    #wrapper {
+      max-width: 1340px;
+      margin: auto;
+      background-color: #121416;
+      min-height: 65vh;
+      z-index: 0;
+      position: relative;
+  }
+/* wrapper med ljus bakgrundsfärg */
+.wrapper1 {
+  max-width: 1340px;
+  margin: auto;
+  background-color: #fffff1;
+    padding: 3em;
+    z-index: 0;
+    position: relative;
+}
+.wrapper2 {
+  max-width: 1340px;
+  margin: auto;
+  background-color: #fffff1;
+    padding: 3em;
+    z-index: 0;
+    position: relative;
+}
+/* hovereffekt på kundvagnsikon */
+#cart :hover .kundkorg {
+  opacity: 0.7;
+  transition: 0.5s;
+ }
+ /* hovereffekt på logga */
+ .logo:hover {
+  opacity: 0.7;
+ }
+  /* styling för h1 */
+  h1 {  
+    margin-bottom: 1em;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+    z-index: -1;
+    position: relative;
+}
+  /* styling för h2 */
+  h2 {
+      padding-bottom: 0.5em;
+      margin-left: -9.4em;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+}
+.articleh2 {
+  margin: auto;
+}
+.varuh2 {
+  padding-bottom: 0.5em;
+  margin-left: -5.7em;
+text-align: center;
+font-family: 'Playfair Display', serif;
+font-size: 2em;
+}
+.h2om {
+  padding-bottom: 1em;
+  margin-left: -0.5em;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+}
+.ombild {
+  width: 100%;
+  padding-top: 2em;
+}
+  /* styling för h3 */
+  h3 {
+    font-family: 'Playfair Display', serif;
+}
+/* strl på bilder på index */
+.indeximg {
+  width: 100%;
+  }
+  /* styling för h3 på infosida */
+.infoh3 {
+  padding-bottom: 0.5em;
+  text-align: center;
+  margin-left: -9.8em;
+}
+/* styling för h2 på kamera/objektivsida*/
+.producth2 {
+  color: white;
+  margin: auto;
+}
+/* placerar brödtext på köpinfosida i mitten av sidan */
+.pinfo {
+  max-width: 40ch;
+  margin: auto;
+  margin-bottom: 1em;
+}
+/* styling för produktsida */
+.productpage {
+  background-color: #fffff1;
+  width: 90%;
+   max-width: 1340px;
+  margin: auto;
+}
+.productimage2 {
+  max-width: 200px;
+  display: flex;
+  margin: auto;
+}
+     /* styling för breadcrumbs som visar besökaren vart h*n befinner sig */
+     .breadcrumbs {
+      padding-left: 2.7em;
+      margin-top: 1.3em;
+      color: white;
+      font-size: 0.9em;
+      font-family: 'Verdana', sans-serif;
+      z-index: -0;
+      position: relative;
+  }
+  .breadcrumbs a{
+   color: #5ca08e;
+}
+.breadcrumbs a:hover{
+    color: white;
+ }
+ /* Sätter specifik styling på h2 på indexsida */
+#indexh2 {
+  color: white;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: -2em;
+  font-size: 1.2em;
+  
+  font-style: italic;
+  margin-bottom: 2em;
+}
+/*styling för brödtext*/
+p {
+  font-family: 'Monsterrat', sans-serif;
+  line-height: 1.5em; /* breddar radmellanrum */
+  text-align: left;
+  max-width: 40ch;
+}
+/* specifik styling för h2 på drönarsida */
+#droneh2 {
+  padding-top: 1em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+/* bredd och luft läggs runt video på drönarsida */
+.videodrone {
+  margin-top: -5em;
+  width: 70%;
+  max-width: 600px;
+  display: block;
+ margin: auto;
+}
+/* styling för footer */
+#flex-center { /* centrering av kolumner */
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+/* bakgrunds- och textfärg för footer*/
+footer {
+  background-color: #08221b;
+  color: white; 
+  padding-top: 1em;
+  line-height: 1.5em;
+  padding-bottom: 1em;
+  width: 100%;
+  height: 12rem;
+}
+footer h3 {
+  padding-bottom: 0.5em;
+}
+/* tar bort liststyling*/
+footer ul {
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+footer li a {
+   color: white;
+   text-decoration: none;
+   font-family: 'Montserrat', sans-serif;
+}
+/* texten ändras vid hover*/
+footer li a:hover {
+  color: #5ca08e;
+  text-decoration: underline;
+  transition: 0.8s; /* skapar transition för hover */
+}
+ /* styling av specifikationslista */
+ li {
+  font-family: 'Montserrat', sans-serif;
+}
+/* styling för button */
+button {
+  background-color: #5ca08e;
+  color: white;
+  padding: 0.3em; /* luft runt text */
+  width: 10em;
+  border: none;
+  border-radius: 30px; /* ger knappen runda hörn */
+  margin-top: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+button:hover {
+  transition: 0.8s;
+  background-color: #335a50;
+  color: white;
+  cursor: pointer;
+}
+    /*styling för när kund klickar på "Köp nu" */
+    #notify {
+     z-index: 1000; /* flyttar den överst */
+      width: 100%;
+      height: 0;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background-color: #08221b;
+      color: white;
+       transition: 1s;
+    }
+    /* texten i notify */
+    #notify p {
+      margin: auto; /* placerar texten i mitten */
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      transition: 1s;
+      padding-top: 10px;
+    }
+    #notify.visible {
+      height: 3em;
+    }
+    /* pris under specifikationer får styling */
+    .priceunderspec {
+      font-family: 'Merriweather', serif;
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    /* "sek" får styling */
+    .priceunderspecsek {
+      font-family: 'Merriweather', serif;
+      margin-bottom: 1em;
+    }
+    .price {
+      margin-top: -1em;
+      margin-bottom: 1em;
+      font-family: 'Merriweather', serif;
+      background-color: lightgrey;
+      padding-bottom: 0.7em;
+  }
+    /* luft runt produktfoto */
+    .productphoto {
+      margin: 4em;
+   }
+   .product-description {
+    padding-left: 1em; 
+      }
+      /* rubriker på varje enskild produktsida */
+      .productheadingspec {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5em;
+        margin-left: -1em;
+        padding-bottom: 0.5em;
+      }
+     /* bildspel- container */
+ .slideshow-container {
+  width: 400px;
+  position: relative;
+ margin: auto;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ align-self: center;
+}
+.slideshowimage {
+  max-width: 400px;
+  max-height: 300px;
+  margin-top: 2em;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  padding: 10px;
+  transition: 0.8s ease;
+  background-color: #fffff1;
+ opacity: 0.7;
+  border-radius: 3px;
+}
+/* position av vänstra "föregående" knapp */
+.prev {
+  left: -1.5em;
+}
+/* position av högra "nästa" knapp */
+.next { 
+  right: -1.5em; 
+}
+    /* hover-styling */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+      opacity: 0.7;
+      color: white;
+    }
+  /* animation i bildspel */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  } 
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+    /* styling för formulär på kontakt-sidan */
+    .form input[type=submit]{ /* bestämmer hur submit knappten ska se ut*/
+      width: 6em;
+        height: 2em;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        border-radius: 30px;
+      background-color: #5ca08e; /* gör en bakgrundsfärg på knappen*/
+      color: white; /* textfärg*/
+      cursor: pointer; /* gör muspekaren till en hand som pekar */
+      border: none;
+    }
+    .form input[type=reset]:hover { /* ändrar knappens utseende när man pekar på den*/
+      transition: 0.8s;
+      background-color: #335a50;
+      color: white;
+    }
+    .form input[type=reset] {
+      width: 6em;
+        height: 2em;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        border-radius: 30px;
+        text-align: center;
+      background-color: #5ca08e; /* gör en bakgrundsfärg på knappen*/
+      color: white; /* textfärg*/
+      cursor: pointer; /* gör muspekaren till en hand som pekar */
+      border: none;
+    }
+    .form input[type=submit]:hover { /* ändrar knappens utseende när muspekaren pekar på knappen */
+    transition: 0.8s;
+    background-color: #335a50;
+    color: white;
+    }
+    /* separerar formulär från rubrik under */
+    form {
+      margin-bottom: 1em;
+    }
+    /* bredd för textinput på kontakt */
+    input {
+      width: 200px;
+      margin-bottom: 0.4em;
+      background-color: #dfdfe5;
+      border-radius: 7px;
+      border: solid 1px lightgrey;
+    }
+    textarea {
+      background-color: #dfdfe5;
+      border-radius: 7px;
+      border: solid 1px lightgrey;
+    }
+    label {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .varukorg {
+     margin: auto;
+    }
+    fieldset {
+      border: none;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .videodesktop {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+       width: 100%;
+       max-width: 1500px;
+     }
+     .dronephoto {
+      width: 80%;
+      margin-top: 1em;
+    }
+    .buybutton {
+      margin-top: 1em;
+      margin-left: -1em;
+      font-family: 'Playfair Display', serif;
+      padding: 1em;
+      border: none;
+      border-radius: 30px;
+      text-align: center;
+      background-color: #5ca08e;
+     color: #fffff1;
+    }
+    .buybutton:hover {
+      background-color: #335a50;
+      color: white;
+      cursor: pointer;
+    }
+    /* buttons på varje produkt på sidorna kamera, objektiv och tillbehör */
+.productbutton {
+  background-color: #5ca08e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+ padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+/* hover styling för knappar*/
+.productbutton:hover {
+  transition: 0.8s;
+  background-color: #335a50;
+  color: white;
+  cursor: pointer;
+}
+ /* flyttar "rensa varukorg"-knapp */
+ #reset {
+  display: block;
+  margin: auto;
+   margin-bottom: 1em;
+ }
+/* styling för mobiltelefoner */
+@media only screen and (max-width: 600px) {
+
+  .logo {
+  width: 10em;
+  display: block;
+  margin: auto;
+  margin-top: -0.8em;
+  top: 0;
+padding: 0;
+border-bottom: solid white;
+}
+.kundkorg {
+  width: 40px;
+  position: absolute;
+  right: 0.3em;
+  margin-top: 2.4em;
+  
+}
+
+#cart {
+  padding: 0;
+  margin: 0;
+  
+}
+#small-basket {
+  font-size: 0.7em;
+  display: block;
+  position: absolute;
+  right: 4.2em;
+  margin-top: 5.4em;
+  padding: 0;
+  
+}
+.mobile {
+  
+  border-radius: 5px;
+  z-index: 100000;
+  width: 50px;
+  height: 50px;
+margin-top: 6em;
+  position: absolute;
+  left: 0;
+}
+.headerdesktop {
+ padding-bottom: 4em;
+}
+  /* video för desktop */
+  .videodesktop {
+   display: none;
+  }
+  .videoipad {
+    display: none;
+  }
+  /* video på index för mobil */
+  .videomobil {
+    margin: auto; /* centrering */
+    width: 100%; /* bredd */
+    max-width: 1500px; 
+  }
+  /* gömmer desktopmeny */
+    .desktopmeny {
+     display: none;
+    }
+    .grid-container { /* text i footer */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5em;
+    padding-left: 2em;
+      line-height: 1.5em;
+    }
+    /*styling för produktersidor*/
+    /* grids för att placera ut de olika produkterna*/
+    /* bakgrundsfärg, luft runt, centrering */
+    .shop-grid3 {
+    width: 90%;
+    max-width: 1340px;
+    margin: auto;
+    
+    }
+    .shop-grid3 div {
+    letter-spacing: 1.5px;
+    }
+    .shop-grid3 div {
+    background-color:#fffff1;
+    padding: 10px;
+    text-align: center; 
+      margin: 10px;
+    }
+    .shop-grid3 img {
+      width: 100%;
+    }
+    .productheading {
+      font-size: 1.4em;
+      background-color: lightgrey;
+      padding-top: 0.5em;
+      font-family: 'Playfair Display', serif;
+      padding-bottom: 1em;
+       }
+      /* nedan följer styling för enskilda-produktsidor */
+     .dronephoto {
+      width: 100%;
+      margin-top: 1em;
+    }
+     .product-item {
+      padding-left: 4em;
+     }
+    .pricespec {
+      font-size: 0.7em;
+    }
+      .product {
+     margin: 0.5em;
+     line-height: 1.5em;
+    }
+    .mobileproduct {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+          /* lägger bilder innanför den ljusa bakgrunden */
+ .mobilephoto {
+  width: 80%;
+  max-width: 280px;
+  margin: auto;
+}
+      /* heading över foto */
+    .productheadingphoto {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      padding-bottom: 0.5em;
+      margin-left: 1em;
+    }
+    /* heading "beskrivning" */
+    .descriptionheading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-left: 1em;
+    }
+    /* brödtext */
+    .productp {
+      padding-bottom: 1em;
+      max-width: 60ch;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      font-family: 'Montserrat', sans-serif;
+    }
+      /* bildspel på varje enskild produktsida göms i mobil*/
+    .slideshow-container {
+        display: none;
+      }
+      .slideshowimage {
+        display: none;
+      }
+      .prev, .next {
+        display: none;
+      }
+      .next {
+        display: none;
+      }
+    .dotsunderslideshow {
+      display: none;
+    }
+    /* rubrik på om-sida */
+    .h2om {
+      padding-left: 0.4em;
+      margin-bottom: -0.4em;
+    }
+    .h2om2 {
+      text-align: left;
+      font-size: 1.8em;
+      margin-top: 1em;
+    }
+/* grid med kolumner och rader för bilder */
+.medarbetare {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ width: 70%;
+
+}
+/* kundvagnsikon */
+    #cart {
+      padding-bottom: 2em;
+      margin-top: 1em;
+    }
+    .varukorg {
+      font-size: 1.5em;
+    }
+   td img {
+     width: 40%;
+     margin-left: 1.5em;
+   }
+    table {
+      max-width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9em;
+    }
+    thead td {
+      padding: 1em;
+      font-size: 0.9em;
+      font-family: 'Playfair Display', serif;
+    }
+    /* lägger "summa" till höger i table */
+    .checkout-sum {
+      padding-left: 50%;
+    }
+      /* styling för h2 */
+      h2 {
+        padding-bottom: 0.5em;
+       margin-left: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+  }
+  .varuh2 {
+    padding-bottom: 0.5em;
+   margin-left: 0;
+text-align: center;
+font-family: 'Playfair Display', serif;
+font-size: 2em;
+}
+    /* styling för h3 på infosida */
+  .infoh3 {
+    padding-bottom: 0.5em;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+/* styling för ipads */
+@media only screen and (min-width: 600px) and (max-width: 910px) {
+.desktopmeny {
+  display: none;
+} 
+.videomobil {
+  display: none;
+}
+.videodesktop {
+  display: none;
+}
+.videoipad {
+  width: 100%;
+  margin: auto;
+}
+.logo {
+  width: 10em;
+  display: block;
+  margin: auto;
+  margin-top: -0.8em;
+  top: 0;
+padding: 0;
+border-bottom: solid white;
+}
+.kundkorg {
+  width: 40px;
+  position: absolute;
+  right: 0.3em;
+  margin-top: 6px;
+  
+}
+
+#cart {
+  padding: 0;
+  margin: 0;
+  
+}
+#small-basket {
+  font-size: 0.7em;
+  display: block;
+  position: absolute;
+  right: 4.2em;
+  margin-top: 2.5em;
+  padding: 0;
+  
+}
+.mobile {
+  
+  border-radius: 5px;
+  z-index: 100000;
+  width: 50px;
+  height: 50px;
+margin-top: 6em;
+  position: absolute;
+  left: 0;
+}
+.headerdesktop {
+ padding-bottom: 4em;
+}
+    .gridindex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: auto;
+    }
+    .grid-container { /* grids för två kolumner */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 3em;
+      line-height: 1.5em;
+    }
+     /* flyttar footertext till mitten */
+    .grid-item-footer1 {
+      margin-left: 60%;
+    }
+    .grid-item-footer2 {
+      margin-left: 10%;
+    }
+    /*styling för produktersida*/
+    /* grids för att placera ut de olika produkterna*/
+    .shop-grid3 {
+    display: grid; 
+    grid-template-rows: 1fr 1fr; /* antal rader */
+      grid-template-columns: 1fr 1fr; /* antal kolumner */
+    width: 90%;
+    max-width: 1340px;
+    margin: auto;
+    }
+    .shop-grid3 div {
+    letter-spacing: 1.5px;
+    }
+    .shop-grid3 div {
+    background-color:#fffff1;
+    padding: 10px;
+    text-align: center; 
+      margin: 10px;
+    }
+    .shop-grid3 img {
+      width: 100%;
+    }
+  
+      /* nedan följer styling för produktsidor */
+     .productheading {
+    font-size: 1.5em;
+    background-color: lightgrey;
+    padding-top: 0.5em;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 1em;
+     }
+    .pricespec {
+      font-size: 0.7em;
+    }
+      .grid-center-product {
+        display: flex;
+        justify-content: center;
+      }
+      .product {
+     margin: 1em;
+     line-height: 1.5em;
+      }
+     .product-item {
+       padding-top: 3em;
+       padding-left: 6em;
+       padding-bottom: 2em;
+     }
+      .productheadingphoto {
+        font-family: 'Playfair Display', serif;
+        padding-left: 3em;
+        padding-top: 2em;
+        font-size: 1.5em;
+    }
+      .product-description {
+    padding-left: 4em; 
+      }
+    .descriptionheading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      padding-bottom: 0.5em;
+    }
+    .productp {
+      padding-bottom: 1em;
+      max-width: 60ch;
+      font-family: 'Montserrat', sans-serif;
+    }
+      /* bildspel på varje enskild produktsida*/
+      .mobilephoto {
+        display: none;
+      }
+      .articleom {
+       margin-left: 2em;
+      }
+    .h2om {
+      padding-bottom: 1em;
+      margin-left: 0.1em;
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+    }
+    .h2om2 {
+      padding-bottom: 1em;
+      padding-top: 1em;
+      margin-left: 0.1em;
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+    }
+    .medarbetare {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 2em;
+      padding-right: 10em;
+     width: 50%;
+    }
+    table {
+      width: 75%;
+      margin: 0 auto;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+    }
+    thead td {
+      padding: 1em;
+      font-size: 1.1em;
+      font-family: 'Playfair Display', serif;
+    }
+    tbody td {
+      padding: 1em;
+    }
+    .checkout-sum {
+      padding-left: 78%;
+    }
+}
+/* styling för desktop */
+@media only screen and (min-width: 910px) {
+   .videomobil {
+    display: none;
+   }
+   .videoipad {
+     display: none;
+   }
+   .mobile {
+     display: none;
+   }
+   .navbar {
+     display: none;
+   }
+   .kundkorg {
+    margin-top: 1em;
+  }
+.gridindex {
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin: auto;
+}
+/* footer */
+
+.grid-container { /* grids för två kolumner */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3em;
+  line-height: 1.5em;
+}
+ /* flyttar footertext till mitten */
+.grid-item-footer1 {
+  margin-left: 60%;
+}
+.grid-item-footer2 {
+  margin-left: 10%;
+}
+/* flyttar footer-text till mitten */
+.grid-item-footer1 {
+  margin-left: 70%;
+}
+.grid-item-footer2 {
+  margin-left: 10%;
+}
+/*styling för produktersida*/
+/* grids för att placera ut de olika produkterna*/
+.shop-grid3 {
+display: grid; 
+grid-template-columns: 1fr 1fr 1fr;
+width: 90%;
+max-width: 1340px;
+margin: auto;
+
+}
+.shop-grid3 div {
+letter-spacing: 1.5px;
+}
+.shop-grid3 div {
+background-color:#fffff1;
+padding: 10px;
+text-align: center; 
+  margin: 10px;
+}
+.shop-grid3 img {
+  width: 100%;
+}
+.videodrone {
+  margin-top: -5em;
+  padding-bottom: 1em;
+}
+  /* nedan följer styling för produktsidor */
+ .productheading {
+font-size: 1.5em;
+background-color: lightgrey;
+padding-top: 0.5em;
+font-family: 'Playfair Display', serif;
+padding-bottom: 1em;
+ }
+.pricespec {
+  font-size: 0.7em;
+}
+  .grid-center-product {
+    display: flex;
+    justify-content: center;
+  }
+  .product {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ grid-template-rows: 1fr 1fr;
+ column-gap: 2em;
+ margin: 1em;
+ line-height: 1.5em;
+  }
+ .product-item {
+   padding-top: 3em;
+ }
+  .productheadingphoto {
+    font-family: 'Playfair Display', serif;
+    padding-left: 8em;
+    padding-top: 2em;
+    font-size: 1.5em;
+}
+.descriptionheading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+  margin-top: 1em;
+}
+.product-description {
+  padding-left: 5em; 
+    }
+.productp {
+  padding-bottom: 1em;
+  max-width: 60ch;
+  font-family: 'Montserrat', sans-serif;
+}
+.dronephoto {
+  width: 80%;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+  /* bildspel på varje enskild produktsida*/
+  .mobilephoto {
+    display: none;
+  }
+  /* grids som fungerar på omsidan vid desktopversion */
+ .omgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 960px;
+  margin: auto;
+ }
+
+  .medarbetare {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 2em;
+    padding-left: 3em;
+  }
+  .medarbetarnamn {
+    padding-left: 3em;
+  }
+form {
+  margin-top: 1em;
+}
+/* styling för kontaktsida */
+.kontakt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3em;
+  max-width: 960px;
+  margin-left: 9em;
+}
+table {
+  width: 75%;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+thead td {
+  padding: 1em;
+  font-size: 1.5em;
+  font-family: 'Playfair Display', serif;
+}
+tbody td {
+  padding: 1em;
+}
+.checkout-sum {
+  padding-left: 78%;
+}
+.h2om {
+  padding-left: 0.4em;
+  padding-bottom: 0.5em;
+}
+.h2om2 {
+  margin-left: -1.3em;
+  padding-bottom: 0.5em;
+}
+/* wrapper med ljus bakgrundsfärg */
+.wrapper2 {
+  max-width: 1340px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  background-color: #fffff1;
+    padding: 3em;
+}
+}
+@media only screen and (min-width: 1360px) {
+  .breadcrumbs {
+    margin-left: 10em;
+  }
+}

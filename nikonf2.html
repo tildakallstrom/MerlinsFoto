@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merlins foto</title>
+  <link rel="stylesheet" href="style/main.css" type="text/css" />
+  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    
+    <!-- mobil-dropdownmeny som göms för desktop -->
+    <!-- divar som skapar hamburgerikon som animeras vid klick -->
+    <div class="mobile">
+      <div class="ham" id="hamburger" onclick="hamburgermenu(this)">
+        <div class="lineone"></div>
+        <div class="linetwo"></div>
+        <div class="linethree"></div>
+      </div>
+      <!-- mobilmenyns navigering -->
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="dronare.html" >Drönare</a></li>
+        <li><a href="kamera.html" class="here">Kamera</a></li>
+        <li><a href="objektiv.html">Objektiv</a></li>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="kopinfo.html">Köpinfo</a></li>
+        <li><a href="cart.html">Kassa</a></li>
+      </ul>
+    </nav>
+    <!-- headercontent med logga, kundvagn-->
+   <div class="headerdesktop">
+      <a href="index.html">
+        <!-- logo länkas till index-->
+        <img src="img/logo.png" alt="Merlins foto" class="logo">
+      </a>
+    
+    
+    <!-- desktopmeny som göms vid mobilvy -->
+    <nav class="desktopmeny">
+      <ul id="nav">
+        <li><a href="dronare.html">Drönare</a></li>
+        <li><a href="kamera.html" class="here">Kamera</a></li>
+        <li><a href="objektiv.html">Objektiv</a></li>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="kontakt.html" >Kontakt</a></li>
+        <li><a href="kopinfo.html">Köpinfo</a></li>
+      </ul>
+    </nav>
+      <!-- kundvagns ikon som vid klick tar besökaren till kassan -->
+      <div id="cart">
+        <a href="cart.html"><span id="small-basket"></span><img src="img/kundkorg.png" alt="kundkorg"
+            class="kundkorg"></a>
+      </div>
+    </div>
+  </header>
+    <p class="breadcrumbs"> <a href="index.html">Start</a> > <a href="kamera.html">Kamera</a> > <a
+        href="nikonf2.html">Nikon F2</a></p>
+  
+  <h1>Nikon</h1>
+  <section class="productpage">
+    <h2 class="articleh2">Analog systemkamera</h2>
+    <div class="product">
+      <article class="product-photo">
+        <h3 class="productheadingphoto">Nikon F2</h3>
+        
+          <a href="img/products/Nikonf2/Nikonf2Abig.png" class="mobileproduct">
+            <picture class="mobileproduct">
+              <source srcset="img/products/Nikonf2/Nikonf2A.webp" type="image/webp" class="mobilephoto">
+        <img src="img/products/Nikonf2/Nikonf2A.png" alt="Nikon F2 kamera" class="mobilephoto">
+      </picture>
+      </a>
+      <a href="img/products/Nikonf2/Nikonf2Bbig.png" class="mobileproduct">
+        <picture class="mobileproduct">
+          <source srcset="img/products/Nikonf2/Nikonf2B.webp" type="image/webp" class="mobilephoto">
+        <img src="img/products/Nikonf2/Nikonf2B.png" alt="Nikon F2 analog kamera" class="mobilephoto">
+      </picture>
+      </a>
+        <div class="slideshow-container">
+          <a href="img/products/Nikonf2/Nikonf2Abig.png" class="mySlides fade">
+            <picture>
+              <source srcset="img/products/Nikonf2/Nikonf2A.webp" type="image/webp" class="slideshowimage">
+              <img src="img/products/Nikonf2/Nikonf2A.png" alt="Nikon F2 kamera" class="slideshowimage">
+            </picture>
+          </a>
+          <a href="img/products/Nikonf2/Nikonf2Bbig.png" class="mySlides fade">
+            <picture>
+              <source srcset="img/products/Nikonf2/Nikonf2B.webp" type="image/webp" class="slideshowimage">
+              <img src="img/products/Nikonf2/Nikonf2B.png" alt="Nikon F2 analog kamera" class="slideshowimage">
+            </picture>
+          </a>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+         
+        </div>
+        <br>
+      </article>
+      <article class="product-item">
+        <h3 class="productheadingspec">
+          Specifikationer</h3>
+        <ul>
+          <li>Analog</li>
+          <li>SLR</li>
+          <li>35mm</li>
+          <li>1971-1980</li>
+        </ul><br>
+        <span class="priceunderspec">3590</span><span class="priceunderspecsek">SEK</span><br>
+        <button onclick="addToBasket(this, '#014', 'Nikon F2', '3590', 'img/products/Nikonf2/Nikonf2small.jpg', true)"
+          class="buybutton"> Lägg i kundvagnen </button><br><br>
+        <div id="notify"></div>
+      </article>
+      <article class="product-description">
+        <h3 class="descriptionheading">Beskrivning</h3>
+        <p class="productp"> Nikon F2 är en kamera med mekanisk 35mm SLR. Denna kamera är en utomordentligt väldgjord
+          helmekanisk SLR. Till F2-systemet finns många olika sökare, fokusskärmar, exponeringsbackar och
+          motordrivenheter. </p>
+          <p class="productp"> Med Nikon F2 kan du fota med slutartider från 1/2000 upp till 10 sekunder. Du kan använda objektiv 
+            som Nikon F, AI och AI-s.
+          </p>
+          <p class="productp"> De olika versionerna av Nikon F2 var världens främsta professionella 35mm SLR-kameror 
+            från 1971 till 1980. Enligt vissa är den även den bästa 35mm SLR-kameran genom tiderna. Nikon F2 är en utomordentligt väldgjord
+            helmekanisk SLR. F2-systemet innehåller många utbytbara sökare, fokusskärmar, 250-exponeringsbackar och motordrivenheter.
+          </p>
+      </article>
+    </div>
+  </section>
+  <footer>
+    <div class="grid-container">
+      <div class="grid-item-footer1">
+        <h3>Om Merlins foto</h3>
+        <ul>
+          <li><a href="om.html">Om företaget</a></li>
+          <li><a href="kontakt.html">Kontakta oss</a></li>
+          <li><a href="kopinfo.html">Köpinformation</a></li>
+        </ul>
+      </div>
+      <div class="grid-item-footer2">
+        <h3>Följ oss</h3>
+        <ul>
+          <li><a href="https://facebook.com">Facebook</a></li>
+          <li><a href="https://instagram.com">Instagram</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js.js"></script>
+    <script src="script.js"></script>
+    <script src="slideshow.js"></script>
+  </footer>
+</body>
+
+</html>
