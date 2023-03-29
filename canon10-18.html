@@ -11,15 +11,12 @@
 <body>
   <header>
   
-    <!-- mobil-dropdownmeny som göms för desktop -->
-    <!-- divar som skapar hamburgerikon som animeras vid klick -->
     <div class="mobile">
       <div class="ham" id="hamburger" onclick="hamburgermenu(this)">
         <div class="lineone"></div>
         <div class="linetwo"></div>
         <div class="linethree"></div>
       </div>
-      <!-- mobilmenyns navigering -->
     </div>
     <nav class="navbar">
       <ul>
@@ -33,15 +30,11 @@
         <li><a href="cart.html">Kassa</a></li>
       </ul>
     </nav>
-    <!-- headercontent med logga, kundvagn-->
    <div class="headerdesktop">
       <a href="index.html">
-        <!-- logo länkas till index-->
         <img src="img/logo.png" alt="Merlins foto" class="logo">
       </a>
     
-    
-    <!-- desktopmeny som göms vid mobilvy -->
     <nav class="desktopmeny">
       <ul id="nav">
         <li><a href="dronare.html">Drönare</a></li>
@@ -52,29 +45,22 @@
         <li><a href="kopinfo.html">Köpinfo</a></li>
       </ul>
     </nav>
-      <!-- kundvagns ikon som vid klick tar besökaren till kassan -->
       <div id="cart">
         <a href="cart.html"><span id="small-basket"></span><img src="img/kundkorg.png" alt="kundkorg"
             class="kundkorg"></a>
       </div>
     </div>
   </header>
-    <!--breadcrumbs visar med länkar vart besökaren befinner sig-->
     <p class="breadcrumbs"> <a href="index.html">Start</a> > <a href="objektiv.html">Objektiv</a> > <a
         href="canon10-18.html">Canon 10-18 F4.5-5.6</a></p>
  
-  <!-- sidrubrik -->
   <h1>Canon</h1>
-  <!-- klass för produktsida med separat styling -->
   <section class="productpage">
-    <!-- beskriver vilken kamera objektivet passar till -->
     <h2 class="articleh2">Objektiv som passar Canonkameror</h2>
     <div class="product">
       <article class="product-photo">
         <h3 class="productheadingphoto">Canon 10-18 F4.5-5.6</h3>
-        <!-- klickbar bild som leder till större bild -->
         <a href="img/products/Canon10-18/Canon10-18Abig.png">
-          <!-- picture med avif, webp och fallback till png-->
           <picture class="mobileproduct">
             <source srcset="img/products/Canon10-18/Canon10-18A.avif" type="image/avif" class="mobilephoto">
             <source srcset="img/products/Canon10-18/Canon10-18A.webp" type="image/webp" class="mobilephoto">
@@ -97,7 +83,6 @@
           <img src="img/products/Canon10-18/Canon10-18C.png" alt="Canon 10-18mm objektiv" class="mobilephoto">
 </picture>
 </a>
-<!-- bildspel för större skärmar -->
         <div class="slideshow-container">
           <a href="img/products/Canon10-18/Canon10-18Abig.png" class="mySlides fade">
             <picture>
@@ -120,7 +105,6 @@
               <img src="img/products/Canon10-18/Canon10-18C.png" alt="Canon 10-18mm objektiv" class="slideshowimage">
             </picture>
           </a>
-          <!-- knappar som låter besökaren navigera i bildspelet -->
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
           
@@ -128,7 +112,6 @@
         <br>
       </article>
       <article class="product-item">
-        <!-- specifikationslista med separat styling för rubrik -->
         <h3 class="productheadingspec">
           Specifikationer</h3>
         <ul>
@@ -136,18 +119,14 @@
           <li>10-18mm</li>
           <li>F4.5-6-6</li>
         </ul><br>
-        <!-- pris med olika styling för numret och "SEK" -->
         <span class="priceunderspec">2575</span><span class="priceunderspecsek">SEK</span><br>
-       <!-- knapp som lägger vara i kundvagn-->
         <button
           onclick="addToBasket(this, '#002', 'Canon 10-18mm', '2575', 'img/products/Canon10-18/Canon10-18small.jpg', true)"
           class="buybutton"> Lägg i kundvagnen</button><br><br>
-       <!-- div som visas när besökaren lägger en vara i kundvagnen-->
           <div id="notify"></div>
       </article>
       <article class="product-description">
         <h3 class="descriptionheading">Beskrivning</h3>
-        <!--produktbeskrivning med separat styling för rubrik och brödtext -->
         <p class="productp">Detta objektiv passar perfekt för både stillbild och video. Den ger en stadig video och
           skarpa bilder tack vare optisk bildstabilisering. Autofokusmotorn är jämn och nästan helt tyst och objektivet
           är lätt och kompakt. </p>
@@ -158,7 +137,6 @@
     </div>
   </section>
   <footer>
-    <!-- footer med grids och bakgrundsfärg -->
     <div class="grid-container">
       <div class="grid-item-footer1">
         <h3>Om Merlins foto</h3>
@@ -177,11 +155,9 @@
         </ul>
       </div>
     </div>
-    <!-- inlänkning av js -->
     <script src="js.js"></script>
     <script src="script.js"></script>
     <script src="slideshow.js"></script>
   </footer>
 </body>
-
 </html>

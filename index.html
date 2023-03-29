@@ -9,21 +9,17 @@
   <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 </head>
 <body>
-     <!-- Video för större skärmar som spelas upp automatiskt -->
      <video class="videodesktop" autoplay loop muted>
       <source src="img/desktopvideo.mp4" type="video/mp4">
     </video>
  
  <header>
-    <!-- mobil-dropdownmeny som göms för desktop -->
-    <!-- divar som skapar hamburgerikon som animeras vid klick -->
     <div class="mobile">
       <div class="ham" id="hamburger" onclick="hamburgermenu(this)">
         <div class="lineone"></div>
         <div class="linetwo"></div>
         <div class="linethree"></div>
       </div>
-      <!-- mobilmenyns navigering -->
     </div>
     <nav class="navbar">
       <ul>
@@ -37,15 +33,11 @@
         <li><a href="cart.html">Kassa</a></li>
       </ul>
     </nav>
-    <!-- headercontent med logga, kundvagn-->
    <div class="headerdesktop">
       <a href="index.html">
-        <!-- logo länkas till index-->
         <img src="img/logo.png" alt="Merlins foto" class="logo">
       </a>
     
-    
-    <!-- desktopmeny som göms vid mobilvy -->
     <nav class="desktopmeny">
       <ul id="nav">
         <li><a href="dronare.html">Drönare</a></li>
@@ -56,28 +48,23 @@
         <li><a href="kopinfo.html">Köpinfo</a></li>
       </ul>
     </nav>
-      <!-- kundvagns ikon som vid klick tar besökaren till kassan -->
       <div id="cart">
         <a href="cart.html"><span id="small-basket"></span><img src="img/kundkorg.png" alt="kundkorg"
             class="kundkorg"></a>
       </div>
     </div>
-          <!-- Video för mindre skärmar -->
     <video class="videomobil" autoplay loop muted>
       <source src="img/mobilvideo.mp4" type="video/mp4">
     </video>  
-      <!-- Video för större skärmar som spelas upp automatiskt -->
       <video class="videoipad" autoplay loop muted>
         <source src="img/desktopvideo.mp4" type="video/mp4">
       </video>
   </header>
-  <!-- wrapper för att ha annan bredd och bakgrundsfärg än body -->
   <h1>Merlins foto</h1>
   <h2 id="indexh2">Din fotobutik på nätet</h2>
   <div id="wrapper">
     <div class="gridindex">
       <div>
-        <!-- webp bild med fallback till jpg samt media query-->
         <picture>
           <source media="(max-width: 400px)" srcset="img/framsida1small.webp" type="image/webp" class="indeximg">
             <source media="(min-width: 400px)" srcset="img/framsida1.webp" type="image/webp" class="indeximg">
@@ -98,7 +85,6 @@
     <img src="img/framsida3.jpg" alt="Drönare" class="indeximg">
     </picture>
   </div> </div>
-  <!-- footer med nödvändiga informationslänkar + länkar till sociala medier-->
   <footer>
     <div class="grid-container">
       <div class="grid-item-footer1">
@@ -122,5 +108,4 @@
     <script src="script.js"></script>
   </footer>
 </body>
-
 </html>

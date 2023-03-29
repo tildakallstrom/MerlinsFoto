@@ -11,16 +11,12 @@
 
 <body>
   <header>
-    
-    <!-- mobil-dropdownmeny som göms för desktop -->
-    <!-- divar som skapar hamburgerikon som animeras vid klick -->
     <div class="mobile">
       <div class="ham" id="hamburger" onclick="hamburgermenu(this)">
         <div class="lineone"></div>
         <div class="linetwo"></div>
         <div class="linethree"></div>
       </div>
-      <!-- mobilmenyns navigering -->
     </div>
     <nav class="navbar">
       <ul>
@@ -34,15 +30,11 @@
         <li><a href="cart.html">Kassa</a></li>
       </ul>
     </nav>
-    <!-- headercontent med logga, kundvagn-->
    <div class="headerdesktop">
       <a href="index.html">
-        <!-- logo länkas till index-->
         <img src="img/logo.png" alt="Merlins foto" class="logo">
       </a>
     
-    
-    <!-- desktopmeny som göms vid mobilvy -->
     <nav class="desktopmeny">
       <ul id="nav">
         <li><a href="dronare.html">Drönare</a></li>
@@ -53,7 +45,6 @@
         <li><a href="kopinfo.html">Köpinfo</a></li>
       </ul>
     </nav>
-      <!-- kundvagns ikon som vid klick tar besökaren till kassan -->
       <div id="cart">
         <a href="cart.html"><span id="small-basket"></span><img src="img/kundkorg.png" alt="kundkorg"
             class="kundkorg"></a>
@@ -82,10 +73,8 @@
       </picture>
       </a>
         <div class="slideshow-container">
-          <!-- bildslideshow -->
           <a href="img/products/NikonD80/Nikond80Abig.png" class="mySlides fade">
             <picture>
-              <!-- picture med två olika bildfiler där webp visas i första hand-->
               <source srcset="img/products/NikonD80/Nikond80A.webp" type="image/webp" class="slideshowimage">
               <img src="img/products/NikonD80/Nikond80A.png" alt="Nikon D80 kamera" class="slideshowimage">
             </picture>
@@ -96,7 +85,6 @@
               <img src="img/products/NikonD80/Nikond80B.png" alt="bild på Nikon D80 kamera" class="slideshowimage">
             </picture>
           </a>
-          <!-- prev och next knappar som gör att besökaren kan klicka vidare i slideshow -->
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
          
@@ -160,5 +148,4 @@
     <script src="slideshow.js"></script>
   </footer>
 </body>
-
 </html>

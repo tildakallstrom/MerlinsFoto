@@ -1,10 +1,8 @@
 'use strict'; 
 
- /* slideshow för bilder på produktsidorna */
  let slideIndex = 1;
  showSlides(slideIndex);
  
- /* kontroller för nästa och föregående bild*/
  function plusSlides(n) {
    showSlides(slideIndex += n);
  }

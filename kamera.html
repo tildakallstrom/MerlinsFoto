@@ -12,15 +12,12 @@
 <body>
   <header>
   
-    <!-- mobil-dropdownmeny som göms för desktop -->
-    <!-- divar som skapar hamburgerikon som animeras vid klick -->
     <div class="mobile">
       <div class="ham" id="hamburger" onclick="hamburgermenu(this)">
         <div class="lineone"></div>
         <div class="linetwo"></div>
         <div class="linethree"></div>
       </div>
-      <!-- mobilmenyns navigering -->
     </div>
     <nav class="navbar">
       <ul>
@@ -34,15 +31,11 @@
         <li><a href="cart.html">Kassa</a></li>
       </ul>
     </nav>
-    <!-- headercontent med logga, kundvagn-->
    <div class="headerdesktop">
       <a href="index.html">
-        <!-- logo länkas till index-->
         <img src="img/logo.png" alt="Merlins foto" class="logo">
       </a>
     
-    
-    <!-- desktopmeny som göms vid mobilvy -->
     <nav class="desktopmeny">
       <ul id="nav">
         <li><a href="dronare.html">Drönare</a></li>
@@ -53,7 +46,6 @@
         <li><a href="kopinfo.html">Köpinfo</a></li>
       </ul>
     </nav>
-      <!-- kundvagns ikon som vid klick tar besökaren till kassan -->
       <div id="cart">
         <a href="cart.html"><span id="small-basket"></span><img src="img/kundkorg.png" alt="kundkorg"
             class="kundkorg"></a>
@@ -65,29 +57,21 @@
   <h1>Kamera</h1>
   <h2 class="producth2">Se våra kameror nedan</h2>
   <div class="shop-grid3">
-    <!-- produkter med bild, rubrik osv som via knapp länkar till enskild produktsida-->
     <div class="artikel">
       <h3 class="productheading">Nikon D80</h3>
-      <!--produktens namn-->
       <h4 class="price">4590 SEK</h4>
-      <!--produktens pris-->
       <p class="productp">Nikons fenomenala, lättanvända entusiastkamera.</p>
       <picture>
         <source srcset="img/products/NikonD80/Nikond80.webp" type="image/webp" class="productimage2">
       <img src="img/products/NikonD80/Nikond80.jpg" alt="Nikon D80" class="productimage"> <!-- bild på produkten-->
       </picture>
-      <!-- knapp kallad "Mer info" som leder till enskild produktsida -->
       <button class="productbutton" onclick="location.href='nikond80.html'"> Mer info </button>
     </div>
 
     <div class="artikel">
-      <!-- rubrik med produktnamn -->
       <h3 class="productheading">Nikon F2</h3>
-      <!-- h4 med styling till pris -->
       <h4 class="price">3590 SEK</h4>
-      <!-- kortare presentation av vara-->
       <p class="productp">Professionell 35mm SLR kamera som tillverkades under 71-80.</p>
-      <!-- picturetagg med webp fil i första hand, fallback till jpg-->
       <picture>
         <source srcset="img/products/Nikonf2/Nikonf2.webp" type="image/webp" class="productimage2">
  <img src="img/products/Nikonf2/Nikonf2.jpg" alt="Nikon F2" class="productimage">
